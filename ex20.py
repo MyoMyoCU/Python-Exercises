@@ -6,7 +6,7 @@ def print_all(f):
     print(f.read())
 
 def rewind(f):
-    f.seek(0)
+    f.seek(0)     #moves the file to 0 bytes
 
 def print_a_line(line_count ,f):
     print(line_count , f.readline())
