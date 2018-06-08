@@ -1,5 +1,5 @@
 import ex25
-sentence = " All good things come to those who wait ."
+sentence = "All good things come to those who wait."
 words = ex25.break_words(sentence)
 words
 sorted_words = ex25.sort_words(words)
