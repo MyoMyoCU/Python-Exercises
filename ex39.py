@@ -23,6 +23,12 @@ print('-' * 10)
 print("Michigan's abbreviation is: ", states['Michigan'])
 print("Florida's abbreviation is: ", states['Florida'])
 
+
+print('_'*10)
+print("Michigan has :" ,cities[states['Michigan']])
+print("Florida has :" , cities[states['Florida']])
+
+
 print('-' * 10)
 for state, abbrev in list(states.items()):
 	print(f"{state} is abbreviated {abbrev}")
