@@ -26,19 +26,19 @@ else:
      PHRASE_FIRST = False
 
   
-for word in urlopen(WORD_URL).readLines():
+for word in urlopen(WORD_URL).readlines():
     WORDS.append(str(word.strip(),encoding="utf-8"))
 
 
 def convert(snippet , phrase ):
     class_names = [w.capitalize() for w in random.sample(WORDS,snippet.count("%%%"))]
     other_names = random.sample(WORDS, snippet.count("***"))
-    result = []
+    results = []
     param_names = []
 
     for i in range(0 , snippet.count("@@@")):
-        param_count = random.randiant(1,3)
-        param_names.append(', '.join(random.sample(WORDS.param_count)))
+        param_count = random.randint(1,3)
+        param_names.append(', '.join(random.sample(WORDS, param_count)))
 
     for sentence in snippet , phrase:
         result = sentence[:]
@@ -58,17 +58,17 @@ def convert(snippet , phrase ):
 
 try:
     while True:
-        snippets = list(PHRASES.key())
+        snippets = list(PHRASES.keys())
         random.shuffle(snippets)
 
         for snippet in snippets:
             phrase = PHRASES[snippet]
-            question , answer = convert(snippet , phrase)
+            question, answer = convert(snippet, phrase)
             if PHRASE_FIRST :
-                question , answer = answer , question
+                question, answer = answer, question
 
             print(question)
             input("> ")
             print(f"ANSWER: {answer}\n\n")
-except E0FError:
+except EOFError:
     print("\nBye")
